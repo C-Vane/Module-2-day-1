@@ -24,16 +24,20 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
             integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
             crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+        <script src="/index.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="index.css">
         <style>
             /* EXERCISE 1
             For all Albums we'd like to have a consistent style.
@@ -67,43 +71,51 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             Implement a navigation bar using the bootstrap component
             This navigation bar must be linked to every section in your page
         -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class=" navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg container">
+                <a class="navbar-brand" href="#">
+                    <img src="image/aural-1297838_640.png" height="70px"></img> MyMusic</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#favoriteAlbums">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#albumReview">Album Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#worstAlbums">Hall of shame</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#admire">Best Artist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tapestry">Cover Gallery</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Bio-->
+        <div class="container mt-5 d-flex  flex-column">
+            <h1 class="mx-auto">Welcome to my music Paradise</h1>
+            <p class="mx-auto">I'm a pround member of the beehive, so this page is dadicated to <strong>Queen
+                    B</strong><br> The one and only</p>
+            <h4 class="mx-auto">Beyoncé</h4><br>
+            <i>Hope you enjoy your time on my page...
+            </i>
+        </div>
         <!-- EXERCISE 3
             Create a responsive section for your favourite albums.
             In this section you should have:
@@ -111,47 +123,118 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             - 3 albums per row when you are on a tablet (or a smaller window)
             - 2 albums per row when you are on a small screen
         -->
-        <div class="container" id="favoriteAlbums">
-            <div class="row">
 
-                <div class="card col-6 col-md-4 col-lg-3 albumcontainer" style="width: 18rem;">
-                    <img src="..." class="card-img-top albumcover" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title albumtitle">Album title</h5>
-                        <p class="albumartist"></p>
-                        <p class="albumgenre"></p>
-                        <p class="albumduration"></p>
-                        <media class="music" src="" alt="music sample"></media>
+        <button class=" togbtns" type="button" data-toggle="collapse" data-target="#favoriteAlbums"
+            aria-expanded="false" aria-controls="collapseExample">
+            >
+        </button>
+        <h2>My Favorite Albums</h2>
+        <div class="container" id="favoriteAlbums">
+
+
+
+            <div class="row mt-5">
+
+                <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                    <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-1"
+                        aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg" class="card-img-top albumcover"
+                            alt="">
+                        <img src="/image/qweenb2.jpg" class="card-img-top albumcover" alt="...">
+                    </a>
+                    <div class="card-body collapse mb-5" id="album-1">
+                        <h5 class="card-title albumtitle">Lemonade</h5>
+                        <p class="albumartist"> Beyoncé</p>
+                        <p class="albumgenre"> R&B </p>
+                        <p class="albumduration">45:42</p>
+                        <audio controls alt="music sample" onplay="rotate(event)" onpause="stoprotate(event)">
+                            <source
+                                src="https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview111/v4/24/62/a1/2462a10b-320d-ff20-9f44-30e2bf2ad603/mzaf_4531054081629953866.plus.aac.p.m4a"
+                                type="audio/ogg"></audio>
                     </div>
                 </div>
-                <div class="card col-6 col-md-4 col-lg-3 albumcontainer" style="width: 18rem;">
-                    <img src="..." class="card-img-top albumcover" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title albumtitle">Album title</h5>
-                        <p class="albumartist"></p>
-                        <p class="albumgenre"></p>
-                        <p class="albumduration"></p>
-                        <media class="music" src="" alt="music sample"></media>
+                <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                    <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-2"
+                        aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg" class="card-img-top albumcover"
+                            alt="">
+                        <img src="/image/qweenb.jpg" class="card-img-top albumcover" alt="...">
+                    </a>
+                    <div class="card-body collapse mb-5" id="album-2">
+                        <h5 class="card-title albumtitle">Everything is love</h5>
+                        <p class="albumartist"> Beyoncé</p>
+                        <p class="albumgenre"> R&B </p>
+                        <p class="albumduration">41:45</p>
+                        <audio controls alt="music sample" onplay="rotate(event)" onpause="stoprotate(event)">
+                            <source
+                                src="https://talkglitz.media/wp-content/uploads/2018/06/Beyonce_x_Jay_Z_-_Boss_talkglitz.tv.mp3"
+                                type="audio/ogg"></audio>
                     </div>
                 </div>
-                <div class="card col-6 col-md-4 col-lg-3 albumcontainer" style="width: 18rem;">
-                    <img src="..." class="card-img-top albumcover" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title albumtitle">Album title</h5>
-                        <p class="albumartist"></p>
-                        <p class="albumgenre"></p>
-                        <p class="albumduration"></p>
-                        <media class="music" src="" alt="music sample"></media>
+                <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                    <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-3"
+                        aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg" class="card-img-top albumcover"
+                            alt="">
+                        <img src="/image/qwbdengerouslyinlove.jpg" class="card-img-top albumcover" alt="...">
+                    </a>
+                    <div class="card-body collapse mb-5" id="album-3">
+                        <h5 class="card-title albumtitle">DANGEROUSLY IN LOVE (2003)</h5>
+                        <p class="albumartist"> Beyoncé</p>
+                        <p class="albumgenre"> R&B </p>
+                        <p class="albumduration">45:42</p>
+                        <audio controls alt="music sample" onplay="rotate(event)" onpause="stoprotate(event)">
+                            <source
+                                src="https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/9d/42/d7/mzm.gotovham.aac.p.m4a"
+                                type="audio/ogg"></audio>
                     </div>
                 </div>
-                <div class="card col-6 col-md-4 col-lg-3 albumcontainer" style="width: 18rem;">
-                    <img src="..." class="card-img-top albumcover" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title albumtitle">Album title</h5>
-                        <p class="albumartist"></p>
-                        <p class="albumgenre"></p>
-                        <p class="albumduration"></p>
-                        <media class="music" src="" alt="music sample"></media>
+                <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                    <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-4"
+                        aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg" class="card-img-top albumcover"
+                            alt="">
+                        <img src="/image/qwbhomecoming.jpg" class="card-img-top albumcover" alt="...">
+                    </a>
+                    <div class="card-body collapse mb-5" id="album-4">
+                        <h5 class="card-title albumtitle">Homecoming</h5>
+                        <p class="albumartist"> Beyoncé</p>
+                        <p class="albumgenre"> R&B </p>
+                        <p class="albumduration">108:57</p>
+                        <audio controls alt="music sample" onplay="rotate(event)" onpause="stoprotate(event)">
+                            <source
+                                src="https://cdn.downloadmaster.cc/download.php?id=NPigmYfco3s&method=download&title=Beyonc%C3%A9%20-%20Bow%20Down,%20I%20Been%20On%20-&token=70e5eb7a3467947f820872c4be03e1e5d1d542df"
+                                type="audio/ogg"></audio>
+                    </div>
+                </div>
+                <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                    <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-5"
+                        aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg" class="card-img-top albumcover"
+                            alt="">
+                        <img src="/image/qweenb1.jpg" class="card-img-top albumcover" alt="...">
+                    </a>
+                    <div class="card-body collapse mb-5" id="album-5">
+                        <h5 class="card-title albumtitle">Beyoncé</h5>
+                        <p class="albumartist"> Beyoncé</p>
+                        <p class="albumgenre"> Electro-R&B </p>
+                        <p class="albumduration">66:35</p>
+                        <audio controls alt="music sample" onplay="rotate(event)" onpause="stoprotate(event)">
+                            <source
+                                src="https://cdn.downloadmaster.cc/download.php?id=IyuUWOnS9BY&method=download&title=Beyonc%C3%A9%20-%20***Flawless%20ft.%20Chimamanda%20Ngozi%20Adichie&token=7b86889a35e7e7304c2bdcda21bbc9bd9de23239"
+                                type="audio/ogg"></audio>
+                    </div>
+                </div>
+                <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                    <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-6"
+                        aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg" class="card-img-top albumcover"
+                            alt="">
+                        <img src="/image/The_Lion_King_The_Gift.png" class="card-img-top albumcover" alt="...">
+                    </a>
+                    <div class="card-body collapse mb-5" id="album-6">
+                        <h5 class="card-title albumtitle">The Lion King: The Gift</h5>
+                        <p class="albumartist"> Beyoncé</p>
+                        <p class="albumgenre"> R&B Afrobeat Hip Hop</p>
+                        <p class="albumduration">54:00</p>
+                        <audio controls alt="music sample" onplay="rotate(event)" onpause="stoprotate(event)">
+                            <source
+                                src="https://afrobeat.co.za/file/uploads/2020/05/Beyonc_Ft_Tekno_Yemi_Alade_Mr_Eazi_-_Don_t_Jealous_Me-AfroBeat.Co.Za.mp3"
+                                type="audio/ogg"></audio>
                     </div>
                 </div>
             </div>
@@ -169,53 +252,262 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             - Tracklist
             - ... And whatever you think it's interesting about it!
         -->
-        <div class="container" id="albumReview">
+        <button class="togbtns" type="button" data-toggle="collapse" data-target="#albumReview" aria-expanded="false"
+            aria-controls="collapseExample">
+            >
+        </button>
+        <h2 class="mx-auto">Lemonade Album Review</h2>
+        <div class="container mt-5" id="albumReview">
+            <div class="card col-8 mb-4 mx-auto">
+                <div class="row mx-auto no-gutters">
+
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h4 class="card-title">Beyoncé</h4>
+                            <p class="card-text">Lemonade is a "visual album" with corresponding videos in the
+                                mold of
+                                her 2013
+                                self-titled set, renders infidelity and reconciliation with a cinematic
+                                vividness.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/image/qweenb2.jpg" class="card-img" alt="Lemonade album cover">
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <h5>Studio album by Beyoncé</h5>
+                        <ul>
+                            <li><strong>Released</strong> April 23,2016</li>
+                            <li><strong>Recorded</strong> June 2014 - July 2015</li>
+                            <li><strong>Genre</strong> R&B ,art pop</li>
+                            <li><strong>Length</strong> 45:42</li>
+                            <li><strong>Lable</strong>Parkwood, Columbia</li>
+                            <li><strong>Released</strong>April 23,2016</li>
+                        </ul>
+                        <h6>Hold Up</h6>
+                        <p> is one of my favorite songs from this album not only for it's vocals but also for the
+                            amazing
+                            vesuals.</p>
+                        <iframe height="180px"
+                            src="https://www.youtube.com/embed/PeonBmeFR8o?list=TLPQMjIxMDIwMjDH8-hBnrc4YQ"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <h5>Songs from Lemonade</h5>
+                        <ol>
+                            <li> Pray You Catch Me</li>
+                            <li> Hold Up</li>
+                            <li> Don't HUrt Yourself</li>
+                            <li> Sorry</li>
+                            <li> 6 Inch</li>
+                            <li> DAddy Lessons</li>
+                            <li> Love Drought</li>
+                            <li> Sandcastles</li>
+                            <li> Forward</li>
+                            <li> Freedom</li>
+                            <li> All night</li>
+                            <li> Formation</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
 
         </div>
         <!-- EXERCISE 5
             Worst album list! Find out the music you don't really like or you find overrated and list it
             in this "hall of shame" chart!
         -->
+        <button class="togbtns" type="button" data-toggle="collapse" data-target="#worstAlbums" aria-expanded="false"
+            aria-controls="collapseExample">
+            >
+        </button>
+        <h2>Hall of Shame</h2>
+        <p class="mx-auto">There isn't much I hate when it comes to music, but this are some I think are a bit
+            overrated</p>
+        <h3 class="mx-auto">My Least Favorite Albums</h3>
         <div class="container" id="worstAlbums">
 
+            <div class=" container" id="favoriteAlbums">
 
+                <div class="row mt-5">
+
+                    <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                        <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-7"
+                            aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg"
+                                class="card-img-top albumcover" alt="">
+                            <img src="/image/Hall of shame/220px-Cardi_B_-_Invasion_of_Privacy.png"
+                                class="card-img-top albumcover" alt="...">
+                        </a>
+                        <div class="card-body collapse mb-5" id="album-7">
+                            <h5 class="card-title albumtitle">Inavasion of Privacy</h5>
+                            <p class="albumartist"> Cardi B</p>
+                            <p class="albumgenre"> Hip Hop </p>
+                            <p class="albumduration">48:13</p>
+                        </div>
+                    </div>
+                    <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                        <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-8"
+                            aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg"
+                                class="card-img-top albumcover" alt="">
+                            <img src="/image/Hall of shame/220px-Bad_vibes_forever_xxxtentacion.jpg"
+                                class="card-img-top albumcover" alt="...">
+                        </a>
+                        <div class="card-body collapse mb-5" id="album-8">
+                            <h5 class="card-title albumtitle"> Bad Vibes Forever</h5>
+                            <p class="albumartist"> XXXTENTACION</p>
+                            <p class="albumgenre"> Hip Hop </p>
+                            <p class="albumduration">57:24</p>
+                        </div>
+                    </div>
+                    <div class="card col-6 col-md-4 col-lg-3 albumcontainer">
+                        <a class="collapsed" data-toggle="collapse" role="button" data-target="#album-9"
+                            aria-expanded="true"> <img src="/image/vinyl-2202325_1280.jpg"
+                                class="card-img-top albumcover" alt="">
+                            <img src="/image/Hall of shame/220px-Dua_Lipa_-_Club_Future_Nostalgia.png"
+                                class="card-img-top albumcover" alt="...">
+                        </a>
+                        <div class="card-body collapse mb-5" id="album-9">
+                            <h5 class="card-title albumtitle">Club Future Nostalgia</h5>
+                            <p class="albumartist"> Dua Lipa & The Blessed Madonna </p>
+                            <p class="albumgenre"> House, pop, soul</p>
+                            <p class="albumduration">50:07</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- EXERCISE 6
             Do you have any musician / band you admire or you are fan of?
             This section is dedicated to him / her / them!
             Feel free to experiment in this part of the page.
         -->
-        <div class="contaier" id="admire">
+        <button class="togbtns" type="button" data-toggle="collapse" data-target="#admire" aria-expanded="false"
+            aria-controls="collapseExample">
+            >
+        </button>
+        <h2 class="mb-5">Artists I admire</h2>
 
+        <div class="container">
+
+
+            <div class="contaier" id="admire">
+                <div class="row">
+                    <div class="col-4 square"><a href="https://en.wikipedia.org/wiki/Bruno_Mars" target="_blank">
+                            <img src="/image/Diffrent Artist/bruno-mars-facts-songs.jpg">
+                        </a>
+                        <h6>Bruno Mars</h6>
+                    </div>
+                    <div class="col-4 square"><a href="https://en.wikipedia.org/wiki/Michael_Jackson" target="_blank">
+                            <img src="/image/Diffrent Artist/f6d2216546f6e336248b14c50ab37492.jpg">
+                        </a>
+                        <h6>Michael Jackson</h6>
+                    </div>
+                    <div class="col-4 square"><a href="https://en.wikipedia.org/wiki/Frank_Sinatra" target="_blank">
+                            <img src="/image/Diffrent Artist/rs-10950-20130513-franksinatra-x624-1368471911.jpg">
+                        </a>
+                        <h6>Frank Sinatra</h6>
+                    </div>
+                    <div class="col-4 square"><a href="https://en.wikipedia.org/wiki/Billie_Eilish" target="_blank">
+                            <img src="/image/Diffrent Artist/billy.jpg">
+                        </a>
+                        <h6>Billie Eilish</h6>
+                    </div>
+                    <div class="col-4 square"><a href="https://en.wikipedia.org/wiki/Teddy_Afro" target="_blank">
+                            <img src="/image/Diffrent Artist/teddy.jpg">
+                        </a>
+                        <h6>Teddy Afro</h6>
+                    </div>
+                    <div class="col-4 square"><a href="https://en.wikipedia.org/wiki/Elvis_Presley" target="_blank">
+                            <img src="/image/Diffrent Artist/singer-elvis-presley-news-photo-1590531497.jpg">
+                        </a>
+                        <h6>Elvis Presley</h6>
+                    </div>
+                </div>
+
+            </div>
         </div>
         <!-- EXERCISE 7
             Just covers!
             Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
             Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
-        -->
-        <div class="container" id="tapestry">
+        --> <button class="togbtns" type="button" data-toggle="collapse" data-target="#tapestry" aria-expanded="false"
+            aria-controls="collapseExample">
+            >
+        </button>
+        <h2>Album Cover Galary</h2>
+        <div class="container mt-5" id="tapestry">
             <div class="row">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
-                <img src="" alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover">
+                <img src="/image/Album Covers/ariana-grande-sweetner-album-art-2018-billboard-1240-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/FKA-Twigs-LP1-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Fleetwood-Mac-Rumours-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Funkadelic-Maggot-Brain-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Lady-Gaga-Fame-Monster-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Lizzo-Cuz-I-Love-You-album-art-2019-billboard-1240_0-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Madonna-True-Blue-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Nicki-Minaj-The-Pinkprint-greatest-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Sex-Pistols-Never-Mind-the-Bollocks-greatest-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Taylor-Swift-1989-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/The-Slits-The-Slits-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Whitney-Houston-Whitney-Houston-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Young-Thug-Jeffery-2016-billboard-1240-compressed.jpg" alt="album picture"
+                    class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Grace-Jones-Island-Life-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/David-Bowie-Aladdin-Sane-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/If-youre-reading-this-its-too-late-drake-no1-albums-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Judas-Priest-British-Steel-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/The-Roots-Things-Fall-Apart-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/To-pimp-a-butterfly-kendrick-lamar-no1-albums-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/The-Notorious-B-I-G-Ready-to-Die-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Beyoncé_-_4.png" alt="album picture"
+                    class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Pink-Floyd-Dark-Side-of-the-Moon-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/The-Beatles-Abbey-Road-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
+                <img src="/image/Album Covers/Patti-Smith-Horses-album-covers-billboard-1000x1000-compressed.jpg"
+                    alt="album picture" class="col-6 col-md-4 col-lg-2 albumcover mb-4">
             </div>
+        </div>
+
+        <div class="container">
+            <footer>
+                <i>If you enjoyed the miusic and cover art go check out the following links....</i>
+                <div>
+                    <a href="https://" target="_blank" class="fa fa-facebook fa-3x"></a>
+                    <a href="https://" target="_blank" class="fa fa-instagram fa-3x"></a>
+                    <a href="https://" target="_blank" class="fa fa-youtube fa-3x"></a>
+                    <a href="https://" target="_blank" class="fa fa-spotify fa-3x"></a>
+                </div>
+                <p>For more info email me at vanecattabiani@gmail.com</p>
+            </footer>
         </div>
 
         <!-- EXTRA:
@@ -234,9 +526,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         <!-- EXERCISE 8
             Implement a footer with some information / social links
         -->
-        <footer>
 
-        </footer>
     </body>
 
 </html>

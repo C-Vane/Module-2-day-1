@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Libre+Baskerville:ital,wght@0,700;1,400&family=Raleway:wght@300;500&family=Staatliches&display=swap");
+body {
+  background-image: linear-gradient(109.5deg, rgba(229, 233, 177, 1) 11.2%, rgba(223, 205, 187, 1) 100.2%);
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.togbtns {
+  margin: 10px;
+  top: -10px;
+  margin-right: 10%;
+  background-color: transparent;
+  font-size: 20px;
+  color: #505050;
+  transform: rotate(90deg);
+  border: #505050;
+  align-self: flex-end;
+}
+h1,
+h2,
+h4,
+h5 {
+  font-family: "Libre Baskerville", serif;
+}
+i {
+  font-family: "Libre Baskerville", serif;
+}
+h2 {
+  margin: auto;
+}
+.navbar-brand,
+p + h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+}
+.togbtns:hover,
+.togbtns:checked {
+  transform: rotate(180deg);
+  border: inherit;
+  background-color: transparent;
+}
+body > div:first-child {
+  background: rgb(2, 0, 36);
+}
+.card {
+  background-color: transparent;
+  border: none;
+}
+#admire {
+  max-width: 90%;
+}
+
+#favoriteAlbums .row .card img {
+  border-radius: 100%;
+  background-color: transparent;
+}
+#favoriteAlbums .row .card a img:nth-child(2) {
+  position: relative;
+  width: 45%;
+  top: -50%;
+  left: 27%;
+}
+#favoriteAlbums a {
+  margin-bottom: -90px;
+}
+.rotate {
+  animation: rotation 5s infinite linear;
+}
+#admire .square {
+  position: relative;
+  width: 50%;
+}
+
+#admire .square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+#admire h6 {
+  position: relative;
+  top: 80%;
+  left: 15px;
+  font-size: 35px;
+  font-weight: 800;
+  color: #505050c2;
+  font-family: "Staatliches", cursive;
+}
+
+#admire img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    margin-top: 40px;
+    margin-left: 0px;
+  }
+  #admire h6 {
+    top: 60%;
+    font-size: 12px;
+  }
+  #worstAlbums .container,
+  #favoriteAlbums .container,
+  #albumReview .container {
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+}
+footer {
+  margin: auto;
+}
+footer a {
+  font-family: "Raleway", sans-serif;
+  font-size: 70px;
+  display: inline;
+  color: #eee8aa;
+  text-decoration: none;
+  text-shadow: 0px 0px 5px rgb(210, 105, 30);
+  margin: 70px;
+}
+footer a:hover {
+  color: black;
+  text-shadow: 0px 0px 4px gold, 0px 0px 10px rgb(255, 165, 0);
+}
+footer a:active {
+  color: rgb(252, 232, 246);
+}
